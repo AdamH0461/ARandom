@@ -4,34 +4,52 @@ h1 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    color: red;
 }
 h2{
     font-size: 15px;
     text-align: center;
+    color: red;
 }
 
 body {
-    background-color:lightblue;
+    background-color: black;
     text-align: center;
 }
 
-div.sidelink {
-    padding: 10px;
+div.side {
     text-align: left;
-    background-color: white;
     width: 160px;
+    background-color: white;
     border-style: solid;
     border-color: white;
     border-width: 1px;
     border-radius: 20px;
 }
-div.sidelink a:link, a:visited {
+div.header {
+    background-color: gray;
+    font-size: 25px;
+    width: 150px;
+    margin: auto;
+    margin-top: -1px;
+    text-align: center;
+    padding: 3px;
+    border-color: red;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+}
+div.links {
+    padding: 10px;
+}
+div.links a:link, a:visited {
     background-color: #f44336;
     color: white;
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: 10px;
+    margin: auto;
+    margin-bottom: 5px;
     border-style: solid;
     border-width: 1px;
     border-color: blue;
