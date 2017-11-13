@@ -4,27 +4,37 @@ h1 {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    color: red;
+    color: black;
 }
-h2{
+h2 {
     font-size: 15px;
     text-align: center;
-    color: red;
+    color: black;
+}
+
+p {
+    color: black;
 }
 
 body {
-    background-color: black;
+    background-color: white;
     text-align: center;
 }
 
+#gameCanvas{
+    float: left;
+    margin-left: 100px;
+}
+
 div.side {
-    text-align: left;
     width: 160px;
-    background-color: white;
+    background-color: teal;
     border-style: solid;
     border-color: white;
     border-width: 1px;
     border-radius: 20px;
+    float: left;
+    clear: none;
 }
 div.header {
     background-color: gray;
