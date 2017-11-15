@@ -98,7 +98,9 @@ function moveEverything(){
     return;
   }
   calculateBallPos();
-  paddle2Ai();
+  if(ballXSpeed > 0){
+    paddle2Ai();
+  }
 }
 function endScreen(){
   showingEnd = true;
@@ -146,7 +148,6 @@ function calculateBallPos(){
     if(ballY > paddle1Y &&
        ballY < paddle1Y + PADDLE_HEIGHT){
       ballXSpeed = -ballXSpeed + 10;
-      computerPaddleSpeed += 10
       ballYSpeed += (ballY - paddle1YCenter)*bounceAngle;
       lossStreak = 0;
      } else {
