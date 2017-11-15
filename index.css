@@ -26,10 +26,15 @@ body {
     float: left;
     margin-left: 00px;
     background-color: red;
+    width: 800px;
+}
+
+div.page {
+    display: flex;
+    flex-flow: row nowrap;
 }
 
 div.sections {
-    width: 800px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -37,6 +42,9 @@ div.sections {
     border-color: gray;
     border-style: solid;
     border-radius: 10px;
+    margin: 10px;
+    margin-right: 70px;
+    max-width: 1600px;
 }
 div.sections>.article {
     font-family: sans-serif;
@@ -50,20 +58,23 @@ div.sections>.article {
 }
 
 div.sections>.game {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
     margin: 10px;
+    width: 810px;
     
 }
 
 div.sections>.game >p {
     font-family: sans-serif;
-    align-content: left;
-    order: 1;
+}
+
+div.ad {
+    background-color: blue;
+    float: right;
+    float: top;
+    width: 300px;
 }
 
 div.side {
