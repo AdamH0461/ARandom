@@ -5,8 +5,42 @@ var ctx = cvs.getContext("2d");
 
 var defSpeed = 2;
 
+class Character{
+
+    constructor(src){
+        this.x = 0;
+        this.y = 0;
+        this.speed = {x: 0, y: 0};
+        this.jumpSpeed = -4;
+        this.gravity = 0.1;
+        this.chrImg = new Image();
+        this.chrImg.src = src;
+        this.left = this.right = this.up = this.down = false;
+    }
+    draw(){
+        ctx.drawImage(this.chrImg, this.x, this.y);
+        this.height = this.chrImg.height;
+        this.width = this.chrImg.width;
+    }
+}
+class Grid{
+
+    constructor(rows, columns){
+        this.rows = rows;
+        this.columns = columns;
+    }
+}
+
 window.onload = function(){
-    player = new Character("images/character.png")
+    player = new Character("images/character.png");
+    
+    var left = { bool: false};
+    var right = { bool: false};
+    var keyDirection = {};
+    keyDirection[37] = left;
+    keyDirection[37].bool = true;
+    console.log(left);
+
     setInterval(function(){
         move(player);
         drawScreen();
@@ -18,6 +52,8 @@ function drawScreen(){
     rect(0, 0, cvs.width, cvs.height, "black");
     player.draw();
 }
+
+
 
 document.addEventListener("keydown", function(e){
     id = e.which || e.keyCode || e.keyPressed;
@@ -78,31 +114,7 @@ function checkEdge(char){
         char.y --;
     }
 }
-class Character{
 
-    constructor(src){
-        this.x = 0;
-        this.y = 0;
-        this.speed = {x: 0, y: 0};
-        this.jumpSpeed = -4;
-        this.gravity = 0.1;
-        this.chrImg = new Image();
-        this.chrImg.src = src;
-        this.left = this.right = this.up = this.down = false;
-    }
-    draw(){
-        ctx.drawImage(this.chrImg, this.x, this.y);
-        this.height = this.chrImg.height;
-        this.width = this.chrImg.width;
-    }
-}
-class Grid{
-
-    constructor(rows, columns){
-        this.rows = rows;
-        this.columns = columns;
-    }
-}
     
 
 function rect(x, y, w, h, colour){
