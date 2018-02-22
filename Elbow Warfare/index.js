@@ -109,11 +109,12 @@ function onGround(char){
         return false;
     }
 }
-function checkEdge(char){
+/*function checkEdge(char){
     if(char.y + char.height > cvs.height + 1){
         char.y --;
     }
 }
+*/
 
     
 
